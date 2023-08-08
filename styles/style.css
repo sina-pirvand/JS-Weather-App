@@ -4,6 +4,7 @@
   --white-color: #fff;
   --silver-color: #eff6f8;
   --gray-main: #bfc5c6;
+  --gray-dark: #777;
 }
 
 * {
@@ -13,7 +14,13 @@
 }
 
 .gray-main {
-  color: var(--gray-main);
+  color: var(--gray-main) !important;
+}
+.gray-dark {
+  color: var(--gray-dark) !important;
+}
+.cyan-main {
+  color: var(--cyan-main) !important;
 }
 
 .mt-lg {
@@ -35,11 +42,13 @@
 
 #body {
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* background-color: var(--cyan-bg); */
 }
 
-#main {
+#main-1,
+#main-2,
+#main-3 {
   width: 90%;
   height: 90%;
   background-color: #fff;
@@ -124,6 +133,51 @@ input {
 input::placeholder {
   color: var(--gray-main) !important;
 }
+
+#search-city-btn {
+  width: 40px;
+  height: 40px;
+}
+
+/*! ****************************************** */
+/* !PAGE3 */
+/*! ****************************************** */
+.weather-icon {
+  width: 220px;
+}
+
+.temperature-main {
+  font-size: 72px;
+  margin-top: -1.5rem;
+}
+
+.icon-md {
+  width: 32px;
+}
+
+.weather-card-sm {
+  background-color: var(--white-color);
+  border-radius: 2rem;
+}
+
+.img-sm {
+  width: 72px;
+}
+
+.weather-temp-sm {
+  font-size: 1.7rem;
+}
+
+.weather-condition-sm {
+  font-size: 0.8rem;
+  margin-top: -0.4rem;
+}
+
+.weather-date-sm {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+}
+
 /*! ****************************************** */
 /* ! MEDIA QUERIES */
 /*! ****************************************** */
@@ -202,7 +256,9 @@ input::placeholder {
     margin-top: 7rem;
   }
 
-  #main {
+  #main-1,
+  #main-2,
+  #main-3 {
     height: 80%;
   }
   /*! ****************************************** */
@@ -242,6 +298,54 @@ input::placeholder {
 
   input {
     width: 60% !important;
+  }
+
+  /*! ****************************************** */
+  /* !PAGE3 */
+  /*! ****************************************** */
+  .weather-icon {
+    width: 320px;
+  }
+
+  .temperature-main {
+    font-size: 88px;
+    margin-top: -1.5rem;
+  }
+
+  .icon-md {
+    width: 48px;
+  }
+
+  .weather-card-sm {
+    border-radius: 8rem 2rem 2rem 2rem;
+  }
+
+  .img-sm {
+    width: 160px;
+  }
+
+  .img-sm.weather-icon-sm {
+    position: relative;
+    right: -3.5rem;
+    top: -0.5rem;
+  }
+
+  .weather-text-sm-container {
+    margin-left: 3rem;
+  }
+
+  .weather-temp-sm {
+    font-size: 3rem;
+  }
+
+  .weather-condition-sm {
+    font-size: 1.2rem;
+  }
+
+  .weather-date-sm {
+    font-size: 1.6rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
   }
 }
 
