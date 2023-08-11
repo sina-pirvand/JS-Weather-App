@@ -80,6 +80,11 @@
 /* !PAGE2 */
 /*! ****************************************** */
 
+.arrow-left {
+  width: 24px;
+  height: 24px;
+}
+
 .btn-prev {
   top: -2.2rem;
   left: -1rem;
