@@ -41,9 +41,10 @@ btnPrev.forEach((btn) =>
 SearchCityForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  //! SEARCH CITY
   if (SearchCityInput.value !== "") {
+    //*Search city
     requestApi(SearchCityInput.value);
+    //* Change page
     pageNum++;
     pageChange();
   }
@@ -53,5 +54,14 @@ SearchCityForm.addEventListener("submit", (e) => {
 const apiKey = `c31fe415291450443037b3e14668e91b`;
 function requestApi(city) {
   let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-  fetch(api).then((response) => console.log(response.json()));
+
+  //* first we return the api response by parsing it into a JS obj
+  //* then weather details will be called with response as an argument
+  fetch(api)
+    .then((response) => response.json())
+    .then((result) => weatherDetails(result));
+}
+
+function weatherDetails(info) {
+  console.log(info);
 }

@@ -27,7 +27,7 @@
       >
         <img src="assets/icons/drop-light.png" alt="main icon" class="img-md" />
       </div>
-      <div class="w-50">
+      <div id="start-app-container">
         <h1 class="text-center fw-bold display-1 mt-4 mb-2 mb-lg-4">Drops</h1>
         <h4 class="text-center fw-normal gray-main">Weather App</h4>
         <button
@@ -58,6 +58,13 @@
         </button>
       </div>
 
+      <div class="px-3 px-md-5 py-4 rounded-4 position-absolute data-loading">
+        <span class="h4 cyan-main text-center text-nowrap"
+          >Getting Weather Data <span class="loading-dots loading-dot-1">.</span
+          ><span class="loading-dots loading-dot-2">.</span
+          ><span class="loading-dots loading-dot-3">.</span></span
+        >
+      </div>
       <div
         class="items-container top p-3 position-relative d-flex flex-column justify-content-end align-items-md-start"
       >
